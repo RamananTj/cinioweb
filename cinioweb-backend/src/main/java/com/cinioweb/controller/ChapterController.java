@@ -2,6 +2,7 @@ package com.cinioweb.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,18 +11,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
+import com.cinioweb.dto.StoryBeatAnalysisDto;
+import com.cinioweb.dto.StoryBeatRequestDto;
 import com.cinioweb.entity.Chapter;
 import com.cinioweb.service.ChapterService;
+import com.cinioweb.service.StoryBeatService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/chapters")
 @CrossOrigin(origins = "http://localhost:5173")
 public class ChapterController {
 	private final ChapterService chapterService;
+	private final StoryBeatService storyBeatService;
 	
-	public ChapterController(ChapterService chapterService) {
-		this.chapterService = chapterService;		
+	public ChapterController(ChapterService chapterService, StoryBeatService storyBeatService) {
+		this.chapterService = chapterService;
+		this.storyBeatService = storyBeatService;		
 	}
 	
 	@GetMapping
@@ -51,7 +60,23 @@ public class ChapterController {
 		chapterService.deleteChapter(id);
 	}
 	
-	
+	@PostMapping("/{chapterId}/story-beats")
+	public StoryBeatAnalysisDto analyzeChapter(@PathVariable Long chapterId,
+											   @Valid @RequestBody(required= false)StoryBeatRequestDto request) 
+	{
+		Chapter chapter = chapterService.getChapterById(chapterId);
+		String text = chapter.getChapterText();
+		
+		if(request != null && request.chapterText() !=null && !request.chapterText().isBlank()) {
+			text = request.chapterText();
+		}
+		
+		if(text == null || text.isBlank()) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "This chapter has no text. Add chapterText first.");
+		}
+		
+		return storyBeatService.analyzeChapter(text);
+	}
 	
 }
 

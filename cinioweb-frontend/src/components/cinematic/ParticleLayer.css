@@ -1,0 +1,651 @@
+/* =========================================
+   1. SHARED PARTICLE FOUNDATION
+========================================= */
+
+.particle-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cinematic-particle {
+    position: absolute;
+    display: block;
+    user-select: none;
+    will-change: transform, opacity; /* current element position, size and opacity get changed - letting know the browser*/
+}
+
+
+/* =========================================
+   2. STARS, MAGIC & CELESTIAL PARTICLES
+========================================= */
+
+.particle-golden_stars {
+    color: #e8c878;
+    font-size: 12px;
+    text-shadow: 0 0 8px rgba(232, 200, 120, 0.7);
+}
+
+
+.particle-dust {
+    color: #e8d9bb;
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(225, 235, 190, 0.4);
+}
+
+.particle-stardust {
+    color: #fff1b8;
+    font-size: 8px;
+    text-shadow: 0 0 12px #ffe8a3;
+}
+
+.particle-cosmic_stars {
+    color: #c4b5fd;
+    font-size: 14px;
+    text-shadow: 0 0 12px #a78bfa;
+}
+
+.particle-magic_sparkles {
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0 0 12px #e9d5ff;
+}
+
+.particle-magic_orbs {
+    color: #c4b5fd;
+    font-size: 18px;
+    text-shadow: 0 0 18px #8b5cf6;
+}
+
+.particle-fairy_dust {
+    color: #fbcfe8;
+    font-size: 9px;
+    text-shadow: 0 0 10px #f9a8d4;
+}
+
+.particle-moon_dust {
+    color: #dbeafe;
+    font-size: 10px;
+    text-shadow: 0 0 10px #93c5fd;
+}
+
+.particle-celestial_glow {
+    color: #fff7d6;
+    font-size: 20px;
+    text-shadow: 0 0 20px #fde68a;
+}
+
+.particle-constellation {
+    color: #bfdbfe;
+    font-size: 5px;
+    text-shadow: 0 0 7px #60a5fa;
+}
+
+.particle-comet_trails {
+    color: #bae6fd;
+    font-size: 14px;
+    text-shadow: 0 0 14px #38bdf8;
+}
+
+
+/* =========================================
+   3. WEATHER & ATMOSPHERE
+========================================= */
+
+.particle-rain {
+    color: #a9c8ed;
+    font-size: 18px;
+    text-shadow: 0 0 4px rgba(130, 180, 225, 0.4);
+}
+
+.particle-heavy_rain {
+    color: #7ba5d4;
+    font-size: 24px;
+    text-shadow: 0 0 6px rgba(100, 150, 220, 0.5);
+}
+
+.particle-mist {
+    color: #dbe4ed;
+    font-size: 30px;
+    opacity: 0.4;
+    text-shadow: 0 0 18px #cbd5e1;
+}
+
+.particle-fog {
+    color: #cbd5e1;
+    font-size: 44px;
+    opacity: 0.25;
+    text-shadow: 0 0 28px #e2e8f0;
+}
+
+.particle-snow {
+    color: #ffffff;
+    font-size: 14px;
+    text-shadow: 0 0 8px #dbeafe;
+}
+
+.particle-blizzard {
+    color: #e0f2fe;
+    font-size: 18px;
+    text-shadow: 0 0 12px #bae6fd;
+}
+
+.particle-hail {
+    color: #dbeafe;
+    font-size: 8px;
+    text-shadow: 0 0 4px #93c5fd;
+}
+
+.particle-wind_leaves {
+    color: #a3a66a;
+    font-size: 16px;
+    text-shadow: 0 0 4px #73794c;
+}
+
+.particle-wind_debris {
+    color: #b5a18a;
+    font-size: 7px;
+    text-shadow: 0 0 3px #8b7355;
+}
+
+.particle-sandstorm {
+    color: #d6b78a;
+    font-size: 12px;
+    text-shadow: 0 0 8px #b89563;
+}
+
+.particle-water_spray {
+    color: #bae6fd;
+    font-size: 10px;
+    text-shadow: 0 0 8px #7dd3fc;
+}
+
+.particle-thunder_sparks {
+    color: #e0f2fe;
+    font-size: 16px;
+    text-shadow: 0 0 12px #60a5fa;
+}
+
+
+/* =========================================
+   4. FIRE, HEAT & DESTRUCTION
+========================================= */
+
+.particle-embers {
+    color: #ff9b54;
+    font-size: 12px;
+    text-shadow: 0 0 10px #ff5e00;
+}
+
+.particle-fire_sparks {
+    color: #ffd166;
+    font-size: 9px;
+    text-shadow: 0 0 12px #ff4500;
+}
+
+.particle-burning_ash {
+    color: #a8a29e;
+    font-size: 8px;
+    text-shadow: 0 0 5px #78716c;
+}
+
+.particle-flames {
+    color: #ff6b35;
+    font-size: 22px;
+    text-shadow: 0 0 14px #ff4500;
+}
+
+.particle-heat_shimmer {
+    color: #fcd9a5;
+    font-size: 30px;
+    opacity: 0.25;
+    text-shadow: 0 0 18px #fb923c;
+}
+
+.particle-smoke {
+    color: #9ca3af;
+    font-size: 34px;
+    opacity: 0.3;
+    text-shadow: 0 0 20px #6b7280;
+}
+
+.particle-volcanic_ash {
+    color: #57534e;
+    font-size: 10px;
+    text-shadow: 0 0 5px #292524;
+}
+
+.particle-lava_sparks {
+    color: #fb923c;
+    font-size: 13px;
+    text-shadow: 0 0 12px #dc2626;
+}
+
+.particle-explosion_debris {
+    color: #d6bda5;
+    font-size: 9px;
+    text-shadow: 0 0 5px #78716c;
+}
+
+
+/* =========================================
+   5. NATURE & FOREST
+========================================= */
+
+.particle-dust {
+    color: #e8d9bb;
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(225, 235, 190, 0.4);
+}
+
+.particle-pollen {
+    color: #fef3c7;
+    font-size: 8px;
+    text-shadow: 0 0 8px #fde68a;
+}
+
+.particle-fireflies {
+    color: #d9f99d;
+    font-size: 9px;
+    text-shadow: 0 0 14px #a3e635;
+}
+
+.particle-falling_leaves {
+    color: #b7a56a;
+    font-size: 18px;
+    text-shadow: 0 0 5px #786442;
+}
+
+.particle-autumn_leaves {
+    color: #d97736;
+    font-size: 20px;
+    text-shadow: 0 0 7px #92400e;
+}
+
+.particle-cherry_blossoms {
+    color: #f9a8d4;
+    font-size: 17px;
+    text-shadow: 0 0 8px #fbcfe8;
+}
+
+.particle-flower_petals {
+    color: #fda4af;
+    font-size: 15px;
+    text-shadow: 0 0 6px #fb7185;
+}
+
+.particle-dandelion_seeds {
+    color: #fef9c3;
+    font-size: 12px;
+    text-shadow: 0 0 7px #fde68a;
+}
+
+.particle-forest_spores {
+    color: #bbf7d0;
+    font-size: 7px;
+    text-shadow: 0 0 10px #4ade80;
+}
+
+.particle-moss_particles {
+    color: #86a878;
+    font-size: 9px;
+    text-shadow: 0 0 5px #4d7c0f;
+}
+
+.particle-sakura_glow {
+    color: #fbcfe8;
+    font-size: 10px;
+    text-shadow: 0 0 12px #f472b6;
+}
+
+.particle-feathers {
+    color: #f5f5f4;
+    font-size: 18px;
+    text-shadow: 0 0 5px #d6d3d1;
+}
+
+
+/* =========================================
+   6. WATER & UNDERWATER
+========================================= */
+
+.particle-bubbles {
+    color: #bae6fd;
+    font-size: 14px;
+    text-shadow: 0 0 8px #38bdf8;
+}
+
+.particle-underwater_plankton {
+    color: #67e8f9;
+    font-size: 6px;
+    text-shadow: 0 0 12px #06b6d4;
+}
+
+.particle-ocean_sparkles {
+    color: #e0f2fe;
+    font-size: 8px;
+    text-shadow: 0 0 10px #38bdf8;
+}
+
+.particle-seafoam {
+    color: #ccfbf1;
+    font-size: 12px;
+    text-shadow: 0 0 7px #5eead4;
+}
+
+.particle-deep_sea_glow {
+    color: #818cf8;
+    font-size: 10px;
+    text-shadow: 0 0 16px #4f46e5;
+}
+
+.particle-water_droplets {
+    color: #dbeafe;
+    font-size: 9px;
+    text-shadow: 0 0 7px #60a5fa;
+}
+
+
+/* =========================================
+   7. ROMANCE & DREAM SEQUENCES
+========================================= */
+
+.particle-heart_sparkles {
+    color: #fb7185;
+    font-size: 12px;
+    text-shadow: 0 0 10px #f43f5e;
+}
+
+.particle-rose_petals {
+    color: #e11d48;
+    font-size: 16px;
+    text-shadow: 0 0 8px #fb7185;
+}
+
+.particle-dream_dust {
+    color: #ddd6fe;
+    font-size: 11px;
+    text-shadow: 0 0 12px #a78bfa;
+}
+
+.particle-soft_glow {
+    color: #fef3c7;
+    font-size: 20px;
+    text-shadow: 0 0 20px #fde68a;
+}
+
+.particle-pink_orbs {
+    color: #f9a8d4;
+    font-size: 14px;
+    text-shadow: 0 0 16px #ec4899;
+}
+
+.particle-luminous_threads {
+    color: #c4b5fd;
+    font-size: 7px;
+    text-shadow: 0 0 10px #8b5cf6;
+}
+
+
+/* =========================================
+   8. SCI-FI & TECHNOLOGY
+========================================= */
+
+.particle-digital_dust {
+    color: #67e8f9;
+    font-size: 8px;
+    text-shadow: 0 0 8px #06b6d4;
+}
+
+.particle-data_stream {
+    color: #4ade80;
+    font-size: 10px;
+    text-shadow: 0 0 8px #22c55e;
+}
+
+.particle-neon_sparks {
+    color: #f0abfc;
+    font-size: 10px;
+    text-shadow: 0 0 12px #d946ef;
+}
+
+.particle-holographic_glitch {
+    color: #67e8f9;
+    font-size: 12px;
+    text-shadow: 2px 0 #f472b6, -2px 0 #60a5fa;
+}
+
+.particle-energy_orbs {
+    color: #93c5fd;
+    font-size: 18px;
+    text-shadow: 0 0 18px #2563eb;
+}
+
+.particle-electric_arcs {
+    color: #bfdbfe;
+    font-size: 16px;
+    text-shadow: 0 0 12px #3b82f6;
+}
+
+.particle-cyber_sparks {
+    color: #a3e635;
+    font-size: 7px;
+    text-shadow: 0 0 10px #84cc16;
+}
+
+.particle-quantum_particles {
+    color: #c4b5fd;
+    font-size: 6px;
+    text-shadow: 0 0 12px #7c3aed;
+}
+
+.particle-portal_energy {
+    color: #e9d5ff;
+    font-size: 14px;
+    text-shadow: 0 0 20px #9333ea;
+}
+
+.particle-stasis_fragments {
+    color: #a5f3fc;
+    font-size: 8px;
+    text-shadow: 0 0 10px #22d3ee;
+}
+
+
+/* =========================================
+   9. HISTORICAL & WAR SCENES
+========================================= */
+
+.particle-candle_ash {
+    color: #c4b5a5;
+    font-size: 6px;
+    text-shadow: 0 0 4px #78716c;
+}
+
+.particle-torch_embers {
+    color: #fbbf24;
+    font-size: 10px;
+    text-shadow: 0 0 12px #ea580c;
+}
+
+.particle-battle_dust {
+    color: #b8a58a;
+    font-size: 15px;
+    text-shadow: 0 0 8px #92734a;
+}
+
+.particle-gunpowder_smoke {
+    color: #a8a29e;
+    font-size: 18px;
+    opacity: 0.35;
+    text-shadow: 0 0 12px #57534e;
+}
+
+.particle-war_ash {
+    color: #78716c;
+    font-size: 9px;
+    text-shadow: 0 0 5px #44403c;
+}
+
+.particle-parchment_dust {
+    color: #d6c19b;
+    font-size: 7px;
+    text-shadow: 0 0 5px #a89065;
+}
+
+.particle-desert_dust {
+    color: #d6b78a;
+    font-size: 12px;
+    text-shadow: 0 0 10px #c49a6c;
+}
+
+
+/* =========================================
+   10. HORROR & DARK FANTASY
+========================================= */
+
+.particle-spectral_mist {
+    color: #a5b4fc;
+    font-size: 28px;
+    opacity: 0.3;
+    text-shadow: 0 0 22px #6366f1;
+}
+
+.particle-ghost_orbs {
+    color: #c7d2fe;
+    font-size: 13px;
+    text-shadow: 0 0 18px #818cf8;
+}
+
+.particle-dark_ash {
+    color: #57534e;
+    font-size: 8px;
+    text-shadow: 0 0 6px #292524;
+}
+
+.particle-blood_specks {
+    color: #991b1b;
+    font-size: 7px;
+    text-shadow: 0 0 6px #7f1d1d;
+}
+
+.particle-cursed_sparks {
+    color: #a3e635;
+    font-size: 9px;
+    text-shadow: 0 0 12px #4d7c0f;
+}
+
+.particle-shadow_fragments {
+    color: #6b7280;
+    font-size: 10px;
+    text-shadow: 0 0 10px #111827;
+}
+
+.particle-soul_fragments {
+    color: #a5f3fc;
+    font-size: 12px;
+    text-shadow: 0 0 16px #0891b2;
+}
+
+.particle-necromantic_energy {
+    color: #86efac;
+    font-size: 10px;
+    text-shadow: 0 0 15px #15803d;
+}
+
+
+/* =========================================
+   11. LIGHT, DUST & CAMERA ATMOSPHERE
+========================================= */
+
+.particle-light_motes {
+    color: #fff7d6;
+    font-size: 5px;
+    text-shadow: 0 0 9px #fef3c7;
+}
+
+.particle-sun_dust {
+    color: #fef3c7;
+    font-size: 10px;
+    text-shadow: 0 0 10px #fbbf24;
+}
+
+.particle-light_rays {
+    color: #fff7ed;
+    font-size: 20px;
+    opacity: 0.25;
+    text-shadow: 0 0 24px #fed7aa;
+}
+
+.particle-lens_sparkles {
+    color: #ffffff;
+    font-size: 14px;
+    text-shadow: 0 0 16px #fef3c7;
+}
+
+.particle-prism_fragments {
+    color: #c4b5fd;
+    font-size: 11px;
+    text-shadow: 0 0 8px #67e8f9;
+}
+
+.particle-floating_dust {
+    color: #d6c9a9;
+    font-size: 4px;
+    text-shadow: 0 0 6px #f5e6bd;
+}
+
+.particle-film_grain {
+    color: #d6d3d1;
+    font-size: 3px;
+    opacity: 0.15;
+}
+
+
+/* =========================================
+   12. ABSTRACT & TRANSITION PARTICLES
+========================================= */
+
+.particle-geometric_fragments {
+    color: #cbd5e1;
+    font-size: 8px;
+    text-shadow: 0 0 6px #94a3b8;
+}
+
+.particle-glass_shards {
+    color: #e0f2fe;
+    font-size: 12px;
+    text-shadow: 0 0 10px #7dd3fc;
+}
+
+.particle-crystal_fragments {
+    color: #ddd6fe;
+    font-size: 10px;
+    text-shadow: 0 0 12px #a78bfa;
+}
+
+.particle-memory_fragments {
+    color: #f5d0fe;
+    font-size: 9px;
+    text-shadow: 0 0 12px #d946ef;
+}
+
+.particle-time_fragments {
+    color: #fde68a;
+    font-size: 7px;
+    text-shadow: 0 0 10px #f59e0b;
+}
+
+.particle-transition_sparks {
+    color: #ffffff;
+    font-size: 12px;
+    text-shadow: 0 0 15px #a78bfa;
+}
+
+.particle-void_particles {
+    color: #818cf8;
+    font-size: 6px;
+    text-shadow: 0 0 10px #312e81;
+}

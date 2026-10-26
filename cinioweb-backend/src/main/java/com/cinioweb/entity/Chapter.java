@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +24,9 @@ public class Chapter {
 	private String title;
 	
 	private Integer chapterOrder;
+	
+	@Column(columnDefinition = "LONGTEXT")
+	private String chapterText;
 	
 	@ManyToOne
 	@JoinColumn(name = "book_id")
@@ -72,6 +76,14 @@ public class Chapter {
 
 	public void setBook(Book book) {
 		this.book = book;
+	}
+
+	public String getChapterText() {
+		return chapterText;
+	}
+
+	public void setChapterText(String chapterText) {
+		this.chapterText = chapterText;
 	}
 	
 	

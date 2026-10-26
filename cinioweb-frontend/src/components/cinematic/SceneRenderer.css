@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient( circle at 70% 35%, rgba(180, 140, 100, 0.18), transparent 35% ), linear-gradient( 135deg, #111827, #1b1b2b, #09090d );
+/*    background: radial-gradient( circle at 70% 35%, rgba(180, 140, 100, 0.18), transparent 35% ), linear-gradient( 135deg, #111827, #1b1b2b, #09090d );  //remove if not needed*/
     color: white;
 }
 

@@ -1,0 +1,564 @@
+/* ---------------------------------------------------------
+   1. SHARED FOUNDATION
+--------------------------------------------------------- */
+
+.environment-renderer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    isolation: isolate;
+    z-index: 0;
+    pointer-events: none;
+    background: #101018;
+    transition: background 1.2s ease;
+}
+
+/* Shared layers */
+.environment-wall,
+.environment-light,
+.environment-atmosphere,
+.environment-texture,
+.environment-vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Depth and environmental surface lighting */
+.environment-wall {
+    z-index: 0;
+    background: radial-gradient( ellipse at 50% 40%, rgba(255, 255, 255, 0.035), transparent 65% );
+}
+
+/* Ambient lighting */
+.environment-light {
+    z-index: 1;
+    background: radial-gradient( circle at 75% 40%, rgba(255, 193, 120, 0.10), transparent 42% );
+}
+
+/* Atmospheric haze */
+.environment-atmosphere {
+    z-index: 2;
+    opacity: 0.7;
+    background: transparent;
+}
+
+/* Very subtle film-like texture */
+.environment-texture {
+    z-index: 3;
+    opacity: 0.12;
+    background-image: repeating-linear-gradient( 0deg, transparent 0px, rgba(255, 255, 255, 0.018) 1px, transparent 2px, transparent 4px );
+}
+
+/* Cinematic vignette */
+.environment-vignette {
+    z-index: 4;
+    background: radial-gradient( ellipse at center, transparent 25%, rgba(0, 0, 0, 0.22) 68%, rgba(0, 0, 0, 0.62) 100% );
+}
+
+
+/* =========================================================
+   2. INTERIOR ENVIRONMENTS
+========================================================= */
+
+/* Default */
+.environment-minimal_dark {
+    background: #101018;
+}
+
+/* Warm bedroom at dusk */
+.environment-bedroom_dusk {
+    background: radial-gradient( ellipse at 80% 35%, #a76a3d 0%, transparent 38% ), linear-gradient( 135deg, #172033 0%, #39303a 50%, #100f17 100% );
+}
+
+    .environment-bedroom_dusk .environment-light {
+        background: radial-gradient( circle at 78% 38%, rgba(255, 172, 91, 0.30), transparent 40% );
+    }
+
+/* Warm candlelit room */
+.environment-candlelit_room {
+    background: radial-gradient( ellipse at 50% 70%, #71472b, transparent 45% ), linear-gradient( 180deg, #211b20, #100c0b );
+}
+
+    .environment-candlelit_room .environment-light {
+        background: radial-gradient( circle at 50% 65%, rgba(255, 157, 56, 0.24), transparent 35% );
+    }
+
+/* Abandoned house */
+.environment-abandoned_house {
+    background: radial-gradient( ellipse at 65% 30%, #4b514b, transparent 45% ), linear-gradient( 160deg, #282c2b, #111312 75% );
+}
+
+/* Old library */
+.environment-old_library {
+    background: radial-gradient( ellipse at 70% 35%, #72502f, transparent 45% ), linear-gradient( 180deg, #38291e, #17120e );
+}
+
+    .environment-old_library .environment-light {
+        background: radial-gradient( ellipse at 70% 30%, rgba(255, 203, 126, 0.18), transparent 38% );
+    }
+
+/* Hospital or institutional interior */
+.environment-hospital {
+    background: linear-gradient( 160deg, #c2d1d3, #667d86 50%, #26363d );
+}
+
+    .environment-hospital .environment-light {
+        background: radial-gradient( ellipse at 50% 0%, rgba(236, 254, 255, 0.28), transparent 55% );
+    }
+
+/* Office at night */
+.environment-office_night {
+    background: radial-gradient( ellipse at 75% 20%, #343d58, transparent 45% ), linear-gradient( 180deg, #161c2a, #080a10 );
+}
+
+/* Underground room */
+.environment-underground {
+    background: radial-gradient( ellipse at 50% 80%, #343c3c, transparent 48% ), linear-gradient( 180deg, #202525, #080b0b );
+}
+
+/* Palace interior */
+.environment-palace {
+    background: radial-gradient( ellipse at 50% 20%, #927044, transparent 50% ), linear-gradient( 135deg, #48341f, #19120d );
+}
+
+
+/* =========================================================
+   3. NATURE & FOREST
+========================================================= */
+
+/* Misty forest */
+.environment-misty_forest {
+    background: radial-gradient( ellipse at 50% 20%, #91a98a, transparent 35% ), linear-gradient( 180deg, #263e38, #172922 55%, #09130f );
+}
+
+    .environment-misty_forest .environment-atmosphere {
+        background: radial-gradient( ellipse at 25% 55%, rgba(207, 225, 203, 0.16), transparent 45% ), radial-gradient( ellipse at 80% 70%, rgba(170, 197, 165, 0.10), transparent 45% );
+    }
+
+/* Dense jungle */
+.environment-dense_jungle {
+    background: radial-gradient( ellipse at 50% 25%, #526c3b, transparent 40% ), linear-gradient( 180deg, #203925, #0a170e 85% );
+}
+
+/* Enchanted forest */
+.environment-enchanted_forest {
+    background: radial-gradient( ellipse at 50% 40%, #345a51, transparent 42% ), linear-gradient( 180deg, #182d35, #09130f );
+}
+
+    .environment-enchanted_forest .environment-light {
+        background: radial-gradient( circle at 48% 35%, rgba(129, 230, 180, 0.18), transparent 35% );
+    }
+
+/* Autumn forest */
+.environment-autumn_forest {
+    background: radial-gradient( ellipse at 65% 30%, #a95f32, transparent 45% ), linear-gradient( 180deg, #5b3829, #1b1511 );
+}
+
+/* Open meadow */
+.environment-meadow {
+    background: radial-gradient( ellipse at 50% 40%, #a7bb76, transparent 50% ), linear-gradient( 180deg, #7796a0, #5b7045 65%, #27351f );
+}
+
+/* Snow-covered forest */
+.environment-snow_forest {
+    background: radial-gradient( ellipse at 50% 20%, #c9dce7, transparent 50% ), linear-gradient( 180deg, #718c9d, #344956 65%, #17262e );
+}
+
+/* Flower garden */
+.environment-flower_garden {
+    background: radial-gradient( ellipse at 50% 35%, #c99bb5, transparent 45% ), linear-gradient( 180deg, #91a7a1, #536d57 70%, #243c2a );
+}
+
+/* Mountain landscape */
+.environment-mountains {
+    background: linear-gradient( 180deg, #839fb5 0%, #a4a99b 38%, #465c5b 65%, #172624 100% );
+}
+
+/* Sunlit forest */
+.environment-sunlit_forest {
+    background: radial-gradient( ellipse at 60% 20%, #d9c98b, transparent 42% ), linear-gradient( 180deg, #617f62, #294936 65%, #10261b );
+}
+
+    .environment-sunlit_forest .environment-light {
+        background: radial-gradient( ellipse at 60% 15%, rgba(255, 237, 176, 0.28), transparent 45% );
+    }
+
+
+/* =========================================================
+   4. SKY, SPACE & CELESTIAL ENVIRONMENTS
+========================================================= */
+
+/* Starry night */
+.environment-starry_night {
+    background: radial-gradient( circle at 50% 20%, #343e70, transparent 40% ), linear-gradient( 180deg, #10152f, #17152b 60%, #080911 );
+}
+
+/* Moonlit landscape */
+.environment-moonlit_landscape {
+    background: radial-gradient( circle at 75% 18%, #c0cde3 0%, rgba(145, 172, 220, 0.16) 12%, transparent 38% ), linear-gradient( 180deg, #182443, #202b42 60%, #080d17 );
+}
+
+/* Sunrise */
+.environment-sunrise {
+    background: radial-gradient( ellipse at 50% 65%, #ffcf9c, transparent 40% ), linear-gradient( 180deg, #6c7197, #dc987c 55%, #453348 );
+}
+
+/* Sunset */
+.environment-sunset {
+    background: radial-gradient( ellipse at 55% 65%, #ffb66e, transparent 38% ), linear-gradient( 180deg, #62547e, #d77968 55%, #30243d );
+}
+
+/* Overcast sky */
+.environment-overcast {
+    background: linear-gradient( 180deg, #78828b, #555f69 55%, #303941 );
+}
+
+/* Cosmic space */
+.environment-cosmic_space {
+    background: radial-gradient( circle at 70% 35%, rgba(125, 80, 190, 0.45), transparent 30% ), radial-gradient( circle at 25% 60%, rgba(48, 112, 180, 0.28), transparent 35% ), linear-gradient( 180deg, #080817, #111127, #03030a );
+}
+
+/* Nebula */
+.environment-nebula {
+    background: radial-gradient( ellipse at 35% 40%, #643c91, transparent 45% ), radial-gradient( ellipse at 75% 55%, #285b85, transparent 42% ), #070714;
+}
+
+/* Alien planet */
+.environment-alien_planet {
+    background: radial-gradient( ellipse at 70% 30%, #8e517c, transparent 38% ), linear-gradient( 180deg, #33254c, #182b42 60%, #080d18 );
+}
+
+/* Eclipse */
+.environment-eclipse {
+    background: radial-gradient( circle at 50% 35%, #060609 0%, #060609 13%, rgba(170, 109, 204, 0.45) 14%, transparent 29% ), linear-gradient( 180deg, #171329, #08070f );
+}
+
+
+/* =========================================================
+   5. WEATHER ENVIRONMENTS
+========================================================= */
+
+/* Rainy city */
+.environment-rainy_city {
+    background: radial-gradient( ellipse at 75% 25%, #425b7d, transparent 38% ), linear-gradient( 180deg, #263348, #111a29 60%, #070a10 );
+}
+
+    .environment-rainy_city .environment-light {
+        background: radial-gradient( ellipse at 75% 40%, rgba(91, 152, 223, 0.19), transparent 40% );
+    }
+
+/* Thunderstorm */
+.environment-thunderstorm {
+    background: radial-gradient( ellipse at 50% 20%, #4a4d65, transparent 40% ), linear-gradient( 180deg, #202333, #0a0c15 );
+}
+
+/* Snowstorm */
+.environment-snowstorm {
+    background: radial-gradient( ellipse at 50% 25%, #a9c0d1, transparent 50% ), linear-gradient( 180deg, #647c8b, #253a48 70%, #101d27 );
+}
+
+/* Foggy morning */
+.environment-foggy_morning {
+    background: linear-gradient( 180deg, #a8b7b4, #7c918d 50%, #455d59 );
+}
+
+    .environment-foggy_morning .environment-atmosphere {
+        background: radial-gradient( ellipse at 50% 55%, rgba(235, 241, 229, 0.32), transparent 65% );
+    }
+
+/* Heatwave */
+.environment-heatwave {
+    background: radial-gradient( ellipse at 50% 25%, #e6b77e, transparent 45% ), linear-gradient( 180deg, #b88a66, #79533f 65%, #38291f );
+}
+
+/* Sandstorm */
+.environment-sandstorm {
+    background: radial-gradient( ellipse at 50% 30%, #cda779, transparent 55% ), linear-gradient( 180deg, #a9815c, #70503a 70%, #3a2b22 );
+}
+
+/* Volcanic eruption */
+.environment-volcanic {
+    background: radial-gradient( ellipse at 50% 75%, #b64420, transparent 35% ), linear-gradient( 180deg, #282125, #19100e 60%, #090605 );
+}
+
+    .environment-volcanic .environment-light {
+        background: radial-gradient( ellipse at 50% 85%, rgba(255, 83, 24, 0.22), transparent 45% );
+    }
+
+
+/* =========================================================
+   6. WATER & UNDERWATER
+========================================================= */
+
+/* Ocean */
+.environment-ocean {
+    background: radial-gradient( ellipse at 50% 20%, #62a9c4, transparent 45% ), linear-gradient( 180deg, #327d9b, #14516f 50%, #06283f );
+}
+
+/* Underwater */
+.environment-underwater {
+    background: radial-gradient( ellipse at 50% 10%, #3b8f9f, transparent 38% ), linear-gradient( 180deg, #17677c, #0a3d59 55%, #031725 );
+}
+
+    .environment-underwater .environment-light {
+        background: repeating-linear-gradient( 110deg, transparent 0%, rgba(144, 235, 255, 0.025) 8%, transparent 16% );
+    }
+
+/* Deep ocean */
+.environment-deep_ocean {
+    background: radial-gradient( ellipse at 50% 45%, #123d62, transparent 45% ), linear-gradient( 180deg, #082c48, #041729 65%, #01070d );
+}
+
+/* Beach */
+.environment-beach {
+    background: linear-gradient( 180deg, #79b7d1 0%, #d5c6a0 55%, #b59b6e 72%, #594b36 100% );
+}
+
+/* Waterfall */
+.environment-waterfall {
+    background: radial-gradient( ellipse at 50% 35%, #9bcbd3, transparent 45% ), linear-gradient( 180deg, #477e83, #265b55 65%, #102f2b );
+}
+
+
+/* =========================================================
+   7. DESERT & ARID LANDSCAPES
+========================================================= */
+
+/* Desert */
+.environment-desert {
+    background: radial-gradient( ellipse at 55% 25%, #f1c78c, transparent 42% ), linear-gradient( 180deg, #c79c74, #a87953 58%, #583b2b );
+}
+
+/* Desert at night */
+.environment-desert_night {
+    background: radial-gradient( ellipse at 50% 20%, #354768, transparent 45% ), linear-gradient( 180deg, #111a31, #282538 60%, #0b0c14 );
+}
+
+/* Canyon */
+.environment-canyon {
+    background: radial-gradient( ellipse at 50% 35%, #b86f49, transparent 45% ), linear-gradient( 180deg, #6f4a3e, #4a2d26 65%, #201512 );
+}
+
+
+/* =========================================================
+   8. CITY & INDUSTRIAL
+========================================================= */
+
+/* Neon city */
+.environment-neon_city {
+    background: radial-gradient( ellipse at 20% 30%, rgba(214, 51, 132, 0.30), transparent 32% ), radial-gradient( ellipse at 80% 40%, rgba(54, 105, 220, 0.28), transparent 35% ), linear-gradient( 180deg, #171526, #10101a 65%, #050509 );
+}
+
+/* Cyberpunk */
+.environment-cyberpunk {
+    background: radial-gradient( ellipse at 70% 25%, rgba(0, 238, 255, 0.17), transparent 35% ), radial-gradient( ellipse at 25% 55%, rgba(245, 0, 135, 0.20), transparent 38% ), linear-gradient( 180deg, #151124, #0b0b16 70%, #030308 );
+}
+
+/* Industrial factory */
+.environment-industrial {
+    background: radial-gradient( ellipse at 60% 25%, #575451, transparent 45% ), linear-gradient( 180deg, #343332, #1b1b1b 70%, #080808 );
+}
+
+/* Rooftop */
+.environment-rooftop {
+    background: radial-gradient( ellipse at 65% 25%, #b77d70, transparent 42% ), linear-gradient( 180deg, #49546c, #292d40 60%, #10111b );
+}
+
+/* Abandoned industrial zone */
+.environment-abandoned_industrial {
+    background: radial-gradient( ellipse at 45% 40%, #51574e, transparent 40% ), linear-gradient( 180deg, #343b39, #171c1a 70%, #080a09 );
+}
+
+
+/* =========================================================
+   9. HISTORICAL & FANTASY
+========================================================= */
+
+/* Medieval village */
+.environment-medieval_village {
+    background: radial-gradient( ellipse at 65% 35%, #a77849, transparent 45% ), linear-gradient( 180deg, #5b6260, #42372c 60%, #17120e );
+}
+
+/* Ancient temple */
+.environment-ancient_temple {
+    background: radial-gradient( ellipse at 50% 25%, #c2a46a, transparent 45% ), linear-gradient( 180deg, #655b42, #3c3325 60%, #17130e );
+}
+
+/* Royal court */
+.environment-royal_court {
+    background: radial-gradient( ellipse at 50% 25%, #d1a55c, transparent 45% ), linear-gradient( 180deg, #65452c, #34251d 65%, #130e0b );
+}
+
+/* Magical realm */
+.environment-magical_realm {
+    background: radial-gradient( ellipse at 50% 40%, rgba(140, 98, 220, 0.48), transparent 42% ), radial-gradient( ellipse at 80% 20%, rgba(69, 182, 205, 0.20), transparent 38% ), linear-gradient( 180deg, #201535, #111326 65%, #07080e );
+}
+
+/* Dragon's lair */
+.environment-dragons_lair {
+    background: radial-gradient( ellipse at 50% 80%, rgba(235, 83, 29, 0.35), transparent 40% ), linear-gradient( 180deg, #30252a, #1b1112 65%, #080505 );
+}
+
+/* Fairy realm */
+.environment-fairy_realm {
+    background: radial-gradient( ellipse at 50% 30%, #b3a0d5, transparent 45% ), linear-gradient( 180deg, #576f82, #4a516b 60%, #1c2338 );
+}
+
+/* Haunted castle */
+.environment-haunted_castle {
+    background: radial-gradient( ellipse at 50% 30%, #424763, transparent 40% ), linear-gradient( 180deg, #202435, #11131f 65%, #050609 );
+}
+
+    .environment-haunted_castle .environment-atmosphere {
+        background: radial-gradient( ellipse at 30% 70%, rgba(148, 163, 184, 0.10), transparent 45% );
+    }
+
+
+/* =========================================================
+   10. HORROR & POST-APOCALYPTIC
+========================================================= */
+
+/* Horror */
+.environment-horror {
+    background: radial-gradient( ellipse at 50% 45%, #302027, transparent 42% ), linear-gradient( 180deg, #21171c, #0e0b0d 70%, #030303 );
+}
+
+/* Haunted forest */
+.environment-haunted_forest {
+    background: radial-gradient( ellipse at 50% 40%, #3c4240, transparent 40% ), linear-gradient( 180deg, #222a2a, #101615 60%, #030706 );
+}
+
+/* Post-apocalyptic wasteland */
+.environment-wasteland {
+    background: radial-gradient( ellipse at 50% 25%, #9d8066, transparent 45% ), linear-gradient( 180deg, #66584c, #38312b 65%, #15120f );
+}
+
+/* Abandoned city */
+.environment-abandoned_city {
+    background: radial-gradient( ellipse at 50% 30%, #66716d, transparent 45% ), linear-gradient( 180deg, #3c4848, #1c2626 65%, #080b0b );
+}
+
+/* Graveyard */
+.environment-graveyard {
+    background: radial-gradient( ellipse at 50% 25%, #515a67, transparent 42% ), linear-gradient( 180deg, #252d3a, #151820 65%, #050609 );
+}
+
+
+/* =========================================================
+   11. SCI-FI & FUTURISTIC
+========================================================= */
+
+/* Space station */
+.environment-space_station {
+    background: radial-gradient( ellipse at 50% 30%, #263b58, transparent 45% ), linear-gradient( 180deg, #111a29, #080d16 70%, #03050a );
+}
+
+/* Futuristic laboratory */
+.environment-futuristic_lab {
+    background: radial-gradient( ellipse at 50% 20%, #b0d8e2, transparent 45% ), linear-gradient( 180deg, #426a7a, #1c3545 65%, #08131e );
+}
+
+    .environment-futuristic_lab .environment-light {
+        background: radial-gradient( ellipse at 50% 35%, rgba(103, 232, 249, 0.15), transparent 45% );
+    }
+
+/* Robot factory */
+.environment-robot_factory {
+    background: radial-gradient( ellipse at 50% 25%, #50616d, transparent 42% ), linear-gradient( 180deg, #273541, #141e27 70%, #06090d );
+}
+
+/* Energy chamber */
+.environment-energy_chamber {
+    background: radial-gradient( circle at 50% 50%, rgba(59, 130, 246, 0.30), transparent 30% ), linear-gradient( 180deg, #161c38, #090d20 70%, #03040b );
+}
+
+/* Digital void */
+.environment-digital_void {
+    background: radial-gradient( ellipse at 50% 50%, #182844, transparent 42% ), #050710;
+}
+
+/* Alien laboratory */
+.environment-alien_lab {
+    background: radial-gradient( ellipse at 65% 30%, rgba(74, 222, 128, 0.17), transparent 40% ), linear-gradient( 180deg, #233a3c, #102323 65%, #050d0c );
+}
+
+
+/* =========================================================
+   12. DREAMS, MEMORY & EMOTIONAL SCENES
+========================================================= */
+
+/* Dreamscape */
+.environment-dreamscape {
+    background: radial-gradient( ellipse at 50% 35%, #d2b8e8, transparent 45% ), linear-gradient( 180deg, #7c83ad, #66577e 65%, #24233e );
+}
+
+/* Memory sequence */
+.environment-memory {
+    background: radial-gradient( ellipse at 50% 40%, rgba(255, 218, 165, 0.20), transparent 50% ), linear-gradient( 180deg, #756451, #463b35 65%, #1b1715 );
+}
+
+/* Romantic scene */
+.environment-romantic {
+    background: radial-gradient( ellipse at 50% 35%, #b76b83, transparent 45% ), linear-gradient( 180deg, #53354f, #302035 65%, #100d18 );
+}
+
+/* Nostalgic warm scene */
+.environment-nostalgic {
+    background: radial-gradient( ellipse at 65% 35%, rgba(247, 194, 119, 0.32), transparent 45% ), linear-gradient( 180deg, #8a7159, #55453a 65%, #211b17 );
+}
+
+/* Melancholy */
+.environment-melancholy {
+    background: radial-gradient( ellipse at 50% 30%, #596c82, transparent 45% ), linear-gradient( 180deg, #303f52, #1b2735 65%, #080d15 );
+}
+
+
+/* =========================================================
+   13. OPTIONAL ATMOSPHERIC ANIMATION
+========================================================= */
+
+/* Gentle movement for selected environments */
+.environment-misty_forest .environment-atmosphere,
+.environment-foggy_morning .environment-atmosphere,
+.environment-haunted_forest .environment-atmosphere,
+.environment-haunted_castle .environment-atmosphere {
+    animation: environment-drift 18s ease-in-out infinite alternate;
+}
+
+.environment-enchanted_forest .environment-light,
+.environment-magical_realm .environment-light,
+.environment-fairy_realm .environment-light {
+    animation: environment-glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes environment-drift {
+    from {
+        transform: translate3d(-1.5%, 0, 0) scale(1);
+        opacity: 0.45;
+    }
+
+    to {
+        transform: translate3d(1.5%, -1%, 0) scale(1.04);
+        opacity: 0.8;
+    }
+}
+
+@keyframes environment-glow {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .environment-renderer,
+    .environment-renderer * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

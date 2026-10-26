@@ -17,7 +17,7 @@ public class CinematicConfig {
 	private Long id;
 	
 	private String emotion;
-	private String environment;
+	private String environmentType;
 	private String background;
 	private String particles;
 	private String camera;
@@ -25,6 +25,12 @@ public class CinematicConfig {
 	private String music;
 	private String transition;
 	
+	private String environment;
+	private String particleType;
+	private Integer particleCount;
+	private String particleSpeed;
+	private Double particleOpacity;	
+
 	@OneToOne
 	@JoinColumn(name = "scene_id")
 	private Scene scene;
@@ -112,6 +118,42 @@ public class CinematicConfig {
 	public void setScene(Scene scene) {
 		this.scene = scene;
 	}
-	
-	
+	public String getEnvironmentType() {
+	    return environmentType;
+	}
+
+	public void setEnvironmentType(String environmentType) {
+	    this.environmentType = environmentType;
+	}
+	public String getParticleType() {
+		return particleType;
+	}
+
+	public void setParticleType(String particleType) {
+		this.particleType = particleType;
+	}
+
+	public Integer getParticleCount() {
+		return particleCount;
+	}
+
+	public void setParticleCount(Integer particleCount) {
+		this.particleCount = particleCount;
+	}
+
+	public String getParticleSpeed() {
+		return particleSpeed;
+	}
+
+	public void setParticleSpeed(String particleSpeed) {
+		this.particleSpeed = particleSpeed;
+	}
+
+	public Double getParticleOpacity() {
+		return particleOpacity;
+	}
+
+	public void setParticleOpacity(Double particleOpacity) {
+		this.particleOpacity = particleOpacity;
+	}
 }
