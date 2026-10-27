@@ -1,13 +1,17 @@
+﻿
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import SceneRenderer from "./SceneRenderer";
 import {getScenesByChapterId, getCinematicConfigBySceneId,} from "../services/sceneService";
 
+import "../components/cinematic/CinematicScene.css";
+
 function CinematicScene() {
     const { chapterId } = useParams();
 
     const [configs, setConfigs] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
@@ -17,6 +21,7 @@ function CinematicScene() {
         async function loadReader() {
             setLoading(true);
             setError("");
+            setCurrentIndex(0);
 
             try {
                 const scenes = await getScenesByChapterId(chapterId);
@@ -26,10 +31,9 @@ function CinematicScene() {
                 );
 
                 const results = await Promise.all(
-                    orderedScenes.map(async (scene) => {
-                        const config = await getCinematicConfigBySceneId(scene.id);
-                        return config;
-                    })
+                    orderedScenes.map((scene) =>
+                        getCinematicConfigBySceneId(scene.id)
+                    )
                 );
 
                 if (!cancelled) {
@@ -37,7 +41,7 @@ function CinematicScene() {
                 }
             } catch (err) {
                 if (!cancelled) {
-                    setError(err.message || "Unable to load the cinematic reader.");
+                    setError( err.message || "Unable to load the cinematic reader.");
                 }
             } finally {
                 if (!cancelled) {
@@ -52,6 +56,41 @@ function CinematicScene() {
             cancelled = true;
         };
     }, [chapterId]);
+
+    function goNext() {
+        setCurrentIndex((index) =>
+            Math.min(index + 1, configs.length - 1)
+        );
+    }
+
+    function goPrevious() {
+        setCurrentIndex((index) =>
+            Math.max(index - 1, 0)
+        );
+    }
+
+    // Keyboard navigation
+    useEffect(() => {
+        function handleKeyDown(event) {
+            if (event.key === "ArrowRight") {
+                setCurrentIndex((index) =>
+                    Math.min(index + 1, configs.length - 1)
+                );
+            }
+
+            if (event.key === "ArrowLeft") {
+                setCurrentIndex((index) =>
+                    Math.max(index - 1, 0)
+                );
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [configs.length]);
 
     if (loading) {
         return <p className="page-message">Preparing your story...</p>;
@@ -78,14 +117,58 @@ function CinematicScene() {
         );
     }
 
+    const currentConfig = configs[currentIndex];
+
     return (
         <main className="cinematic-reader">
-            {configs.map((config) => (
-                <SceneRenderer
-                    key={config.scene.id}
-                    config={config}
-                />
-            ))}
+            <SceneRenderer
+                key={currentConfig.scene.id}
+                config={currentConfig}
+                showChapterTitle={currentIndex === 0}  //when index is 0 alone true get passed
+            />
+
+            {/* Left navigation area */}
+            <button
+                className="scene-navigation scene-navigation-left"
+                onClick={goPrevious}
+                disabled={currentIndex === 0}
+                aria-label="Previous scene"
+                title="Previous scene (←)"
+            >
+                {/*<span>‹</span>*/}
+            </button>
+
+            {/* Right navigation area */}
+            <button
+                className="scene-navigation scene-navigation-right"
+                onClick={goNext}
+                disabled={currentIndex === configs.length - 1}
+                aria-label="Next scene"
+                title="Next scene (→)"
+            >
+                {/*<span>›</span>*/}
+            </button>
+
+            {/* Scene progress */}
+            <div className="scene-progress">
+                <span>
+                    {String(currentIndex + 1).padStart(2, "0")}
+                </span>
+
+                <div className="scene-progress-track">
+                    <div
+                        className="scene-progress-fill"
+                        style={{
+                            width: `${((currentIndex + 1) / configs.length) * 100
+                                }%`,
+                        }}
+                    />
+                </div>
+
+                <span>
+                    {String(configs.length).padStart(2, "0")}
+                </span>
+            </div>
         </main>
     );
 }

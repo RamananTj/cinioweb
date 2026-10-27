@@ -1,43 +1,61 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import "../components/cinematic/SceneRenderer.css";
-import ParticleLayer from "./ParticleLayer"
+import ParticleLayer from "./ParticleLayer";
 import EnvironmentRenderer from "./EnvironmentRenderer";
 
-function SceneRenderer({ config }) {
+function SceneRenderer({ config, showChapterTitle = false }) {
     const titleRef = useRef(null);
     const contentRef = useRef(null);
-   
-    //const scene = config.scene;
-    const scene = config?.scene;  // Safe extraction using optional chaining
-    
 
-    useEffect(() => {
-        // If there is no scene, exit the effect early
-        if (!scene) return;
+    const scene = config?.scene;
+    const chapterTitle = scene?.chapter?.title;
+
+    useEffect(() => {        
 
         const timeline = gsap.timeline();
+        const timeline2 = gsap.timeline();
+        if (scene && showChapterTitle) {
+            timeline
+                .fromTo(
+                    titleRef.current,
+                    { opacity: 0, y: 35 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.6,
+                        ease: "power3.out",
+                    }
+                )
+                .fromTo(
+                    contentRef.current,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.4,
+                        ease: "power2.out",
+                    },
+                    "-=0.5"
+                );
+        }
+        else if (scene) {
+            timeline2               
+                .fromTo(
+                    contentRef.current,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.4,
+                        ease: "power2.out",
+                    }                    
+                );
+        }
 
-        timeline
-            .fromTo(                        //animation of title 
-                titleRef.current,
-                { opacity: 0, y : 40 },
-                { opacity: 1, y: 0, duration: 2, ease: "power4.out" },
-            )
-            .fromTo(                        //animation of content 
-                contentRef.current,
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 2, ease: "power2.out" },
-                "1.3"
-        );
+        return () => timeline.kill();
+    }, [scene, scene.id, showChapterTitle]);
 
-        return () => {
-            timeline.kill();
-        };
-
-    }, [scene]);
-
-    // 2. Early returns for JSX must come AFTER all hooks
     if (!scene) {
         return (
             <main className="cinematic-scene">
@@ -49,18 +67,24 @@ function SceneRenderer({ config }) {
     }
 
     return (
-        <main className="cinematic-scene">            
+        <main className="cinematic-scene">
             <EnvironmentRenderer config={config} />
-            <ParticleLayer config={ config } />
-            <div className="cinematic-content">
-                {/*<h1 ref={titleRef} className="cinematic-title">*/}
-                {/*    {scene.title}*/}
-                {/*</h1>*/}
+            <ParticleLayer config={config} />
 
-                <p ref={contentRef} className="cinematic-block">
+            {showChapterTitle && (
+                <h1 ref={titleRef} className="cinematic-title">
+                    {chapterTitle}
+                </h1>
+            )}
+
+            <div className="cinematic-content">
+                <p
+                    ref={contentRef}
+                    className="cinematic-block"
+                >
                     {scene.content}
                 </p>
-            </div>            
+            </div>
         </main>
     );
 }
