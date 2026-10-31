@@ -94,8 +94,7 @@
               "RelativeToolTip": "src\\pages\\SceneRenderer.jsx",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwBoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-27T10:54:30.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T10:54:30.217Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "src\\components\\cinematic\\CinematicScene.css",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-27T08:17:42.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T08:17:42.388Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "src\\pages\\CinematicScene.jsx",
               "ViewState": "AgIAAIMAAAAAAAAAAAAwwKIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-09-28T08:44:58.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-28T08:44:58.544Z"
             },
             {
               "$type": "Document",
@@ -133,8 +130,7 @@
               "RelativeToolTip": "src\\components\\cinematic\\SceneRenderer.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-02T07:14:51.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-02T07:14:51.278Z"
             },
             {
               "$type": "Document",
@@ -170,8 +166,7 @@
               "RelativeToolTip": "src\\pages\\BooksPage.jsx",
               "ViewState": "AgIAABoAAAAAAAAAAAAIwH8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-22T11:44:02.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T11:44:02.835Z"
             },
             {
               "$type": "Document",
@@ -183,8 +178,7 @@
               "RelativeToolTip": "src\\pages\\ChaptersPage.jsx",
               "ViewState": "AgIAAFkAAAAAAAAAAAAQwFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-22T14:15:48.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T14:15:48.911Z"
             },
             {
               "$type": "Document",
@@ -196,8 +190,7 @@
               "RelativeToolTip": "src\\components\\cinematic\\EnvironmentRenderer.css",
               "ViewState": "AgIAAIwBAAAAAAAAAAAYwKsBAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-16T09:15:36.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T09:15:36.183Z"
             },
             {
               "$type": "Document",
@@ -205,9 +198,9 @@
               "Title": "ParticleLayer.jsx",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx",
               "RelativeDocumentMoniker": "src\\pages\\ParticleLayer.jsx",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx",
-              "RelativeToolTip": "src\\pages\\ParticleLayer.jsx",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAiwH0AAAAMAAAAAAAAAA==",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx*",
+              "RelativeToolTip": "src\\pages\\ParticleLayer.jsx*",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAiwIYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-10-02T12:15:59.331Z",
               "EditorCaption": ""

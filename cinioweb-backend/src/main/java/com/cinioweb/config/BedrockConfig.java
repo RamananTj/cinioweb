@@ -9,7 +9,7 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class BedrockConfig {
 
-	@Bean
+	@Bean("bedrockChatClient")
 	public RestClient bedrockRestClient(
 				@Value("${bedrock.api-key}") String apiKey,
 				@Value("${bedrock.region}") String region
@@ -26,4 +26,13 @@ public class BedrockConfig {
 						)
 				.build();
 	}
+	
+//    @Bean("bedrockChatClient")
+//    public ChatClient bedrockChatClient(
+//            @Qualifier("bedrockProxyChatModel")
+//            BedrockProxyChatModel chatModel) {
+//
+//        return ChatClient.builder(chatModel).build();
+//    }
+
 }

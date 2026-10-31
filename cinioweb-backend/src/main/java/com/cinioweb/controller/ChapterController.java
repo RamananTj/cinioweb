@@ -26,7 +26,7 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "http://localhost:5173")
 public class ChapterController {
 	private final ChapterService chapterService;
-	private final StoryBeatService storyBeatService;
+	private final StoryBeatService storyBeatService; //aws Bedrock model
 	
 	public ChapterController(ChapterService chapterService, StoryBeatService storyBeatService) {
 		this.chapterService = chapterService;
@@ -59,6 +59,7 @@ public class ChapterController {
 	{
 		chapterService.deleteChapter(id);
 	}
+	
 	
 	@PostMapping("/{chapterId}/story-beats")
 	public StoryBeatAnalysisDto analyzeChapter(@PathVariable Long chapterId,

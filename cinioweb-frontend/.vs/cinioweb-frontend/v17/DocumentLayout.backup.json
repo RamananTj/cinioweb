@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\SceneRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\SceneRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\SceneRenderer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\cinematic\\SceneRenderer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\CinematicScene.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\cinematic\\CinematicScene.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\ParticleLayer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\CinematicScene.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -23,12 +15,28 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\cinematic\\EnvironmentRenderer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\EnvironmentRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\EnvironmentRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\CinematicScene.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\cinematic\\CinematicScene.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\ParticleLayer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ChaptersPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\ChaptersPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\SceneRenderer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\cinematic\\SceneRenderer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\BooksPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\BooksPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\SceneRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\SceneRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\EnvironmentRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\EnvironmentRenderer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\ParticleLayer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -37,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\chapterService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\chapterService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ChaptersPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\ChaptersPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\BooksPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\BooksPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -82,74 +82,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "SceneRenderer.jsx",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\SceneRenderer.jsx",
               "RelativeDocumentMoniker": "src\\pages\\SceneRenderer.jsx",
               "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\SceneRenderer.jsx",
               "RelativeToolTip": "src\\pages\\SceneRenderer.jsx",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-10-27T10:54:30.217Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CinematicScene.css",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\CinematicScene.css",
               "RelativeDocumentMoniker": "src\\components\\cinematic\\CinematicScene.css",
               "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\CinematicScene.css",
               "RelativeToolTip": "src\\components\\cinematic\\CinematicScene.css",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGEAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-27T08:17:42.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CinematicScene.jsx",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\CinematicScene.jsx",
               "RelativeDocumentMoniker": "src\\pages\\CinematicScene.jsx",
               "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\CinematicScene.jsx",
               "RelativeToolTip": "src\\pages\\CinematicScene.jsx",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAwwKIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-09-28T08:44:58.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ParticleLayer.jsx",
-              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\ParticleLayer.jsx",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx",
-              "RelativeToolTip": "src\\pages\\ParticleLayer.jsx",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAkwBwAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-02T12:15:59.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EnvironmentRenderer.css",
-              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\EnvironmentRenderer.css",
-              "RelativeDocumentMoniker": "src\\components\\cinematic\\EnvironmentRenderer.css",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\EnvironmentRenderer.css",
-              "RelativeToolTip": "src\\components\\cinematic\\EnvironmentRenderer.css",
-              "ViewState": "AgIAAJsBAAAAAAAAAAAYwKsBAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-16T09:15:36.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "SceneRenderer.css",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\SceneRenderer.css",
               "RelativeDocumentMoniker": "src\\components\\cinematic\\SceneRenderer.css",
@@ -159,42 +135,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-02T07:14:51.278Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Navbar.jsx",
-              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\Navbar.jsx",
-              "RelativeDocumentMoniker": "src\\components\\Navbar.jsx",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\Navbar.jsx",
-              "RelativeToolTip": "src\\components\\Navbar.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-22T10:42:21.231Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "api.js",
-              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\api.js",
-              "RelativeDocumentMoniker": "src\\services\\api.js",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\api.js",
-              "RelativeToolTip": "src\\services\\api.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-10-22T09:20:13.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "bookService.js",
-              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\bookService.js",
-              "RelativeDocumentMoniker": "src\\services\\bookService.js",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\bookService.js",
-              "RelativeToolTip": "src\\services\\bookService.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-10-22T09:42:41.804Z"
             },
             {
               "$type": "Document",
@@ -210,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ParticleLayer.css",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\ParticleLayer.css",
               "RelativeDocumentMoniker": "src\\components\\cinematic\\ParticleLayer.css",
@@ -219,6 +159,94 @@
               "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-02T12:16:24.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BooksPage.jsx",
+              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\BooksPage.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\BooksPage.jsx",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\BooksPage.jsx",
+              "RelativeToolTip": "src\\pages\\BooksPage.jsx",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwH8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-10-22T11:44:02.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChaptersPage.jsx",
+              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ChaptersPage.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\ChaptersPage.jsx",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ChaptersPage.jsx",
+              "RelativeToolTip": "src\\pages\\ChaptersPage.jsx",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAQwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-10-22T14:15:48.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnvironmentRenderer.css",
+              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\EnvironmentRenderer.css",
+              "RelativeDocumentMoniker": "src\\components\\cinematic\\EnvironmentRenderer.css",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\cinematic\\EnvironmentRenderer.css",
+              "RelativeToolTip": "src\\components\\cinematic\\EnvironmentRenderer.css",
+              "ViewState": "AgIAAIwBAAAAAAAAAAAYwKsBAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-16T09:15:36.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ParticleLayer.jsx",
+              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\ParticleLayer.jsx",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ParticleLayer.jsx",
+              "RelativeToolTip": "src\\pages\\ParticleLayer.jsx",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAiwH0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-10-02T12:15:59.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "bookService.js",
+              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\bookService.js",
+              "RelativeDocumentMoniker": "src\\services\\bookService.js",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\bookService.js",
+              "RelativeToolTip": "src\\services\\bookService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-22T09:42:41.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "api.js",
+              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\api.js",
+              "RelativeDocumentMoniker": "src\\services\\api.js",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\api.js",
+              "RelativeToolTip": "src\\services\\api.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-22T09:20:13.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "src\\components\\Navbar.jsx",
+              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\components\\Navbar.jsx",
+              "RelativeToolTip": "src\\components\\Navbar.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-10-22T10:42:21.231Z"
             },
             {
               "$type": "Document",
@@ -234,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "EnvironmentRenderer.jsx",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\EnvironmentRenderer.jsx",
               "RelativeDocumentMoniker": "src\\pages\\EnvironmentRenderer.jsx",
@@ -243,30 +271,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-10-16T09:18:10.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ChaptersPage.jsx",
-              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ChaptersPage.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\ChaptersPage.jsx",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\ChaptersPage.jsx",
-              "RelativeToolTip": "src\\pages\\ChaptersPage.jsx",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAQwFgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-22T14:15:48.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BooksPage.jsx",
-              "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\BooksPage.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\BooksPage.jsx",
-              "ToolTip": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\pages\\BooksPage.jsx",
-              "RelativeToolTip": "src\\pages\\BooksPage.jsx",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwDgAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-22T11:44:02.835Z"
             },
             {
               "$type": "Document",
@@ -282,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "chapterService.js",
               "DocumentMoniker": "D:\\Eclipse Workspace Enterprise IDE\\Cinioweb\\cinioweb-frontend\\src\\services\\chapterService.js",
               "RelativeDocumentMoniker": "src\\services\\chapterService.js",
