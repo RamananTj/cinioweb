@@ -9,14 +9,14 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class BedrockConfig {
 
-	@Bean("bedrockChatClient")
+	@Bean("bedrockRestClient")
 	public RestClient bedrockRestClient(
 				@Value("${bedrock.api-key}") String apiKey,
 				@Value("${bedrock.region}") String region
 						)
 	{
 		return RestClient.builder()
-				.baseUrl(
+				.baseUrl(//https://bedrock-runtime.ap-southeast-2.amazonaws.com
 						"https://bedrock-runtime."
 						+ region + ".amazonaws.com"						
 						)
@@ -25,14 +25,5 @@ public class BedrockConfig {
 							"Bearer " + apiKey.trim()
 						)
 				.build();
-	}
-	
-//    @Bean("bedrockChatClient")
-//    public ChatClient bedrockChatClient(
-//            @Qualifier("bedrockProxyChatModel")
-//            BedrockProxyChatModel chatModel) {
-//
-//        return ChatClient.builder(chatModel).build();
-//    }
-
+	}	
 }

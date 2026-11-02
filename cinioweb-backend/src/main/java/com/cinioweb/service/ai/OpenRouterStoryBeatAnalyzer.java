@@ -76,6 +76,11 @@ public class OpenRouterStoryBeatAnalyzer implements StoryBeatAnalyzer {
 				- Include unnamed characters when they are clearly involved,
 				  using a descriptive identifier such as "Unknown soldier".
 				- Return an empty array if no character is involved.
+				
+				characterVisualDescription:
+				- Give some visual description of each character in this beats.
+				- Describe exactly how the character got described in the passage, do not modify the character description if it got provided.
+				- If no description got provided, Describe something about the character on your own according to beat the context.
 
     		    action:
     		    - Describe what actually happens in this beat.
@@ -120,6 +125,7 @@ public class OpenRouterStoryBeatAnalyzer implements StoryBeatAnalyzer {
     		          "sourceText": "Exact original passage",
     		          "action": "What happens",
     		          "characters": ["Character name"],
+    		          "characterVisualDescription": ["Character visual description"],
     		          "emotionalShift": "Emotional state or transition",
     		          "narrativePurpose": "Why this beat matters",
     		          "location": "Location or Unknown",

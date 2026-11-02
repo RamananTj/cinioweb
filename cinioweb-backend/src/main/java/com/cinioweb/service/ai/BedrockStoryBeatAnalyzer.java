@@ -75,7 +75,7 @@ public class BedrockStoryBeatAnalyzer implements StoryBeatAnalyzer {
 												 );
 		
 		JsonNode response = bedrockRestClient.post()
-							.uri("/model/{modelId}/converse", modelId)
+							.uri("/model/{modelId}/converse", modelId) //https://bedrock-runtime.ap-southeast-2.amazonaws.com/model/claudeHaiku-5.5/converse
 							.body(requestBody)
 							.retrieve()
 							.body(JsonNode.class);

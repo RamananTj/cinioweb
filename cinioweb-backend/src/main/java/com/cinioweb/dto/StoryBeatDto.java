@@ -7,6 +7,7 @@ public record StoryBeatDto(
 		String sourceText,
 		String action,
 		List <String> characters,
+		List <String> characterVisualDescription,
 		String emotionalShift,
 		String narrativePurpose,
 		String location,
