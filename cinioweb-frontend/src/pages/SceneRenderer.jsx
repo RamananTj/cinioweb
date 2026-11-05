@@ -1,66 +1,113 @@
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
-import "../components/cinematic/SceneRenderer.css";
-import ParticleLayer from "./ParticleLayer";
-import EnvironmentRenderer from "./EnvironmentRenderer";
+import { useEffect, useRef, useState } from "react";
 
-function SceneRenderer({ config, showChapterTitle = false }) {
+import "../components/cinematic/SceneRenderer.css";
+
+// import ParticleLayer from "./ParticleLayer";
+// import EnvironmentRenderer from "./EnvironmentRenderer";
+
+import { generateBeatBackground } from "../services/assetService";
+import GlobalErrorPage from "../GlobalErrorPage";
+
+const SERVER_URL = "http://localhost:8080";
+
+function SceneRenderer({
+    beat,
+    chapterTitle,
+    showChapterTitle = false
+}) {
     const titleRef = useRef(null);
     const contentRef = useRef(null);
 
-    const scene = config?.scene;
-    const chapterTitle = scene?.chapter?.title;
+    const [backgroundUrl, setBackgroundUrl] = useState("");
+    const [loadingBackground, setLoadingBackground] = useState(true);
+    const [backgroundError, setBackgroundError] = useState("");
 
-    useEffect(() => {        
+    useEffect(() => {
+        let cancelled = false;
+
+        async function loadBackground() {
+            setLoadingBackground(true);
+            setBackgroundError("");
+            setBackgroundUrl("");
+
+            try {
+                const asset = await generateBeatBackground(beat);
+
+                if (!cancelled) {
+                    const imageUrl = asset.assetUrl.startsWith("http")
+                        ? asset.assetUrl
+                        : `${SERVER_URL}${asset.assetUrl}`;
+
+                    setBackgroundUrl(imageUrl);
+                }
+            } catch (err) {
+                if (!cancelled) {
+                    setBackgroundError(err.message || "Background generation failed.");                    
+                }
+            } finally {
+                if (!cancelled) {
+                    setLoadingBackground(false);
+                }
+            }
+        }
+
+        loadBackground();
+
+        return () => {
+            cancelled = true;
+        };
+    }, [beat]);
+
+    // GSAP animations
+    useEffect(() => {
+        if (!beat) return;
 
         const timeline = gsap.timeline();
-        const timeline2 = gsap.timeline();
-        if (scene && showChapterTitle) {
-            timeline
-                .fromTo(
-                    titleRef.current,
-                    { opacity: 0, y: 35 },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1.6,
-                        ease: "power3.out",
-                    }
-                )
-                .fromTo(
-                    contentRef.current,
-                    { opacity: 0, y: 20 },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1.4,
-                        ease: "power2.out",
-                    },
-                    "-=0.5"
-                );
-        }
-        else if (scene) {
-            timeline2               
-                .fromTo(
-                    contentRef.current,
-                    { opacity: 0, y: 20 },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1.4,
-                        ease: "power2.out",
-                    }                    
-                );
+
+        if (showChapterTitle && titleRef.current) {
+            timeline.fromTo(
+                titleRef.current,
+                {
+                    opacity: 0,
+                    y: 35
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.6,
+                    ease: "power3.out"
+                }
+            );
         }
 
-        return () => timeline.kill();
-    }, [scene, scene.id, showChapterTitle]);
+        if (contentRef.current) {
+            timeline.fromTo(
+                contentRef.current,
+                {
+                    opacity: 0,
+                    y: 20
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.4,
+                    ease: "power2.out"
+                },
+                showChapterTitle ? "-=0.5" : 0
+            );
+        }
 
-    if (!scene) {
+        return () => {
+            timeline.kill();
+        };
+    }, [beat, showChapterTitle]);
+
+    if (!beat) {
         return (
             <main className="cinematic-scene">
                 <div className="no-scene-message">
-                    No scene is associated with this configuration.
+                    No story beat available.
                 </div>
             </main>
         );
@@ -68,23 +115,60 @@ function SceneRenderer({ config, showChapterTitle = false }) {
 
     return (
         <main className="cinematic-scene">
-            <EnvironmentRenderer config={config} />
-            <ParticleLayer config={config} />
+
+            {/* Generated background */}
+            <div
+                className="cinematic-background"
+                style={{
+                    backgroundImage: backgroundUrl
+                        ? `url("${backgroundUrl}")`
+                        : "none"
+                }}
+            />
+
+            {/* Background overlay */}
+            <div className="cinematic-background-overlay" />
+
+            {/* Existing environment and particle effects disabled for now */}
+            {/*
+                <EnvironmentRenderer config={config} />
+                <ParticleLayer config={config} />
+            */}
 
             {showChapterTitle && (
-                <h1 ref={titleRef} className="cinematic-title">
+                <h1
+                    ref={titleRef}
+                    className="cinematic-title"
+                >
                     {chapterTitle}
                 </h1>
             )}
 
             <div className="cinematic-content">
+
                 <p
                     ref={contentRef}
                     className="cinematic-block"
                 >
-                    {scene.content}
+                    {beat.sourceText}
                 </p>
+
             </div>
+
+            {/* Image generation status */}
+            {loadingBackground && (
+                <div className="background-status">
+                    Creating cinematic environment...                    
+                </div>
+            )}
+
+            {backgroundError && (
+                <div className="background-status background-error">
+                    {backgroundError}
+                    <GlobalErrorPage />
+                </div>
+            )}
+
         </main>
     );
 }

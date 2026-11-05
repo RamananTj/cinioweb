@@ -65,7 +65,7 @@ public class ChapterController {
 	public StoryBeatAnalysisDto analyzeChapter(@PathVariable Long chapterId,
 											   @Valid @RequestBody(required= false)StoryBeatRequestDto request) 
 	{
-		Chapter chapter = chapterService.getChapterById(chapterId);
+		Chapter chapter = chapterService.getChapterById(chapterId); //db existing chapter
 		String text = chapter.getChapterText();
 		
 		if(request != null && request.chapterText() !=null && !request.chapterText().isBlank()) {

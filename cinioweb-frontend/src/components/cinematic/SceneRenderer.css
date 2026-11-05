@@ -1,32 +1,94 @@
 .cinematic-scene {
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+/*    flex-direction: column;*/
     justify-content: center;
     align-items: center;
-    color: white;
+/*    color: white;*/
+    background: #080b12;
 }
 
-.cinematic-content {
+/* AI-generated background */
+.cinematic-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.02);
+    transition: background-image 0.5s ease;
+}
+
+
+/* Improves readability of story text */
+.cinematic-background-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.75) );
+}
+
+
+/*.cinematic-content {
     position: relative;
     z-index: 10;
     width: min(800px, 80%);
     text-align: center;
-}
+}*/
 
+/* Chapter title */
 .cinematic-title {
-    margin-bottom: 30px;
+    position: absolute;
+    top: 10%;
+    z-index: 2;
+    color: white;
     font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 400;
-    letter-spacing: 0.05em;
+    text-align: center;
 }
 
-.cinematic-block {
+/* Original story passage */
+.cinematic-content {
+    position: relative;
+    z-index: 2;
+    width: min(800px, 85%);
+    margin: auto;
+}
+
+/*.cinematic-block {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     line-height: 2;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.85);
+}*/
+
+.cinematic-block {
+    color: #ffffff;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.9;
+    text-align: center;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Generation status */
+.background-status {
+    position: absolute;
+    z-index: 3;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 10px 18px;
+    border-radius: 20px;
+}
+
+.background-error {
+    color: #ffaaaa;
 }

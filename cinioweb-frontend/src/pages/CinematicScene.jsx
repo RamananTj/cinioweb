@@ -1,16 +1,21 @@
-﻿
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import SceneRenderer from "./SceneRenderer";
-import {getScenesByChapterId, getCinematicConfigBySceneId,} from "../services/sceneService";
+import {
+    getChapterById,
+    getStoryBeats
+} from "../services/sceneService";
 
 import "../components/cinematic/CinematicScene.css";
+import GlobalErrorPage from "../GlobalErrorPage";
+import CommonLoader from "../components/CommonLoader";
 
 function CinematicScene() {
     const { chapterId } = useParams();
 
-    const [configs, setConfigs] = useState([]);
+    const [chapter, setChapter] = useState(null);
+    const [beats, setBeats] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -21,27 +26,30 @@ function CinematicScene() {
         async function loadReader() {
             setLoading(true);
             setError("");
+            setChapter(null);
+            setBeats([]);
             setCurrentIndex(0);
 
             try {
-                const scenes = await getScenesByChapterId(chapterId);
-
-                const orderedScenes = [...scenes].sort(
-                    (a, b) => a.sceneOrder - b.sceneOrder           // a=3 b=1 a-b=2 => positive result number - switch the b to a and viceversa.  a=1 b=3 a-b=-2  => negative result  places a before b. a==b stays unchanged.  
-                );
-
-                const results = await Promise.all(
-                    orderedScenes.map((scene) =>
-                        getCinematicConfigBySceneId(scene.id)
-                    )
-                );
+                const [chapterData, analysis] = await Promise.all([             //analysis - gets chapterSummary and beats as response
+                    getChapterById(chapterId),
+                    getStoryBeats(chapterId)
+                ]);
 
                 if (!cancelled) {
-                    setConfigs(results.filter(Boolean));
+                    setChapter(chapterData);
+
+                    const orderedBeats = [...analysis.beats].sort(      //analysis.beats alone sorted 
+                        (a, b) => a.beatOrder - b.beatOrder         // a=3 b=1 a-b=2 => positive result number - switch the b to a and viceversa.  a=1 b=3 a-b=-2  => negative result  places a before b. a==b stays unchanged.  
+                    );
+
+                    setBeats(orderedBeats);                         //analysis.beats alone - set into beats
                 }
             } catch (err) {
                 if (!cancelled) {
-                    setError( err.message || "Unable to load the cinematic reader.");
+                    setError(
+                        err.message || "Unable to prepare the cinematic reader."
+                    );
                 }
             } finally {
                 if (!cancelled) {
@@ -58,30 +66,25 @@ function CinematicScene() {
     }, [chapterId]);
 
     function goNext() {
-        setCurrentIndex((index) =>
-            Math.min(index + 1, configs.length - 1)
+        setCurrentIndex(index =>
+            Math.min(index + 1, beats.length - 1)
         );
     }
 
     function goPrevious() {
-        setCurrentIndex((index) =>
+        setCurrentIndex(index =>
             Math.max(index - 1, 0)
         );
     }
 
-    // Keyboard navigation
     useEffect(() => {
         function handleKeyDown(event) {
             if (event.key === "ArrowRight") {
-                setCurrentIndex((index) =>
-                    Math.min(index + 1, configs.length - 1)
-                );
+                goNext();
             }
 
             if (event.key === "ArrowLeft") {
-                setCurrentIndex((index) =>
-                    Math.max(index - 1, 0)
-                );
+                goPrevious();
             }
         }
 
@@ -90,66 +93,66 @@ function CinematicScene() {
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [configs.length]);
+    }, [beats.length]);
 
     if (loading) {
-        return <p className="page-message">Preparing your story...</p>;
+        return (
+            <main className="page-message">
+                <h2>Preparing your cinematic experience...</h2>
+                {/*<p>Analyzing chapter and identifying story beats.</p> */}
+                <CommonLoader message="Analyzing chapter and identifying story beats." />;
+            </main>
+        );
     }
 
     if (error) {
         return (
             <main className="page-container">
                 <p className="error-message">{error}</p>
-                <Link to="/books">Back to books</Link>
+                {/*<Link to="/books">Back to books</Link>*/}
+                <GlobalErrorPage />
             </main>
         );
     }
 
-    if (configs.length === 0) {
+    if (beats.length === 0) {
         return (
             <main className="page-container">
-                <h1>No cinematic scenes yet</h1>
-                <p>
-                    This chapter has no scenes with available cinematic configurations.
-                </p>
+                <h1>No story beats found</h1>
+                <p>Unable to identify story beats in this chapter.</p>
                 <Link to="/books">Back to books</Link>
             </main>
         );
     }
 
-    const currentConfig = configs[currentIndex];
+    const currentBeat = beats[currentIndex];
 
     return (
         <main className="cinematic-reader">
+
             <SceneRenderer
-                key={currentConfig.scene.id}
-                config={currentConfig}
-                showChapterTitle={currentIndex === 0}  //when index is 0 alone true get passed
+                key={`${chapterId}-${currentBeat.beatOrder}`}
+                beat={currentBeat}
+                chapterTitle={chapter?.title}
+                showChapterTitle={currentIndex === 0}
             />
 
-            {/* Left navigation area */}
             <button
                 className="scene-navigation scene-navigation-left"
                 onClick={goPrevious}
                 disabled={currentIndex === 0}
-                aria-label="Previous scene"
-                title="Previous scene (←)"
-            >
-                {/*<span>‹</span>*/}
-            </button>
+                aria-label="Previous beat"
+                title="Previous beat (←)"
+            />
 
-            {/* Right navigation area */}
             <button
                 className="scene-navigation scene-navigation-right"
                 onClick={goNext}
-                disabled={currentIndex === configs.length - 1}
-                aria-label="Next scene"
-                title="Next scene (→)"
-            >
-                {/*<span>›</span>*/}
-            </button>
+                disabled={currentIndex === beats.length - 1}
+                aria-label="Next beat"
+                title="Next beat (→)"
+            />
 
-            {/* Scene progress */}
             <div className="scene-progress">
                 <span>
                     {String(currentIndex + 1).padStart(2, "0")}
@@ -159,14 +162,13 @@ function CinematicScene() {
                     <div
                         className="scene-progress-fill"
                         style={{
-                            width: `${((currentIndex + 1) / configs.length) * 100
-                                }%`,
+                            width: `${((currentIndex + 1) / beats.length) * 100}%`
                         }}
                     />
                 </div>
 
                 <span>
-                    {String(configs.length).padStart(2, "0")}
+                    {String(beats.length).padStart(2, "0")}
                 </span>
             </div>
         </main>

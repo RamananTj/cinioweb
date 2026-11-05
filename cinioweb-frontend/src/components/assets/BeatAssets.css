@@ -1,0 +1,70 @@
+.beat-assets {
+	padding: 24px;
+	color: #eafaff;
+}
+
+.asset-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+	.asset-header button {
+		padding: 12px 22px;
+		border: none;
+		border-radius: 5px 18px 5px 18px;
+		background: #32b8dc;
+		color: #06131b;
+		font-weight: 700;
+		cursor: pointer;
+	}
+
+		.asset-header button:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+.asset-grid {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
+	gap: 24px;
+}
+
+.asset-card {
+	padding: 16px;
+	border: 1px solid #263d4b;
+	border-radius: 12px;
+	background: #111d29;
+}
+
+	.asset-card img {
+		width: 100%;
+		aspect-ratio: 4 / 5;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+	.asset-card p {
+		color: #9eb5c3;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+
+.asset-loading {
+	padding: 24px;
+	text-align: center;
+	color: #32b8dc;
+}
+
+.asset-error {
+	color: #ff8585;
+}
+
+@media (max-width: 600px) {
+	.asset-header {
+		align-items: stretch;
+		flex-direction: column;
+	}
+}

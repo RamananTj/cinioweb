@@ -15,7 +15,7 @@ public class BedrockConfig {
 				@Value("${bedrock.region}") String region
 						)
 	{
-		return RestClient.builder()
+		return RestClient.builder()  
 				.baseUrl(//https://bedrock-runtime.ap-southeast-2.amazonaws.com
 						"https://bedrock-runtime."
 						+ region + ".amazonaws.com"						
@@ -24,6 +24,6 @@ public class BedrockConfig {
 							HttpHeaders.AUTHORIZATION,
 							"Bearer " + apiKey.trim()
 						)
-				.build();
+				.build();  //REST Client instance
 	}	
 }

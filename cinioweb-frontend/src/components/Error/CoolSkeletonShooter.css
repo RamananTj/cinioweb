@@ -1,0 +1,22 @@
+.cool-skeleton-shooter {
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+.cool-skeleton-shooter svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+/* GSAP applies CSS transforms to these inline SVG groups. */
+.cool-skeleton-shooter #character,
+.cool-skeleton-shooter #gun,
+.cool-skeleton-shooter #trigger,
+.cool-skeleton-shooter #targetBottle,
+.cool-skeleton-shooter #bullet,
+.cool-skeleton-shooter #glassShards,
+.cool-skeleton-shooter #muzzleFlash,
+.cool-skeleton-shooter #impactRing,
+.cool-skeleton-shooter .glass-shard {
+  transform-box: fill-box;
+}

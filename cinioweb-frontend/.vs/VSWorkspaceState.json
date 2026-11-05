@@ -1,12 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\cinematic",
-    "\\src\\pages",
-    "\\src\\services"
+    "\\src\\components\\Error",
+    "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\pages\\ParticleLayer.jsx",
+  "SelectedNode": "\\src\\components\\Error\\CoolSkeletonShooter.jsx",
   "PreviewInSolutionExplorer": false
 }

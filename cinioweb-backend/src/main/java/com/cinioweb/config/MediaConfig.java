@@ -16,13 +16,13 @@ public class MediaConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
-        String location = Path.of(uploadDir) // uploadDir = "uploads/character_avatar.jpg"
-                .toAbsolutePath()
+        String location = Path.of(uploadDir) // uploadDir = "uploads"
+                .toAbsolutePath()			//  D:/Eclipse Workspace Enterprise IDE/Cinioweb/cinioweb-backend/uploads
                 .normalize()
                 .toUri()	//converts a file system Path into a URI - /home/user/uploads into file:///home/user/uploads
                 .toString();
 
-        //http://localhost:8080/media/uploads/character_avatar.jpg
+        //http://localhost:8080/media/character_201.jpg
         registry.addResourceHandler("/media/**")  //** act as wild card - allows subpath
                 .addResourceLocations(location);
     }

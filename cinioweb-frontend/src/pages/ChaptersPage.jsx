@@ -4,6 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import EntityForm from "../components/EntityForm";
 import { getBooks } from "../services/bookService";
 import {addChapter, getChaptersByBookId, } from "../services/chapterService";
+import GlobalErrorPage from "../GlobalErrorPage";
+import CommonLoader from "../components/CommonLoader";
 
 function ChaptersPage() {
     const { bookId } = useParams();  //path variable from frontend url can be used using useParams  - BooksPages.jsx /books/${bookId}/chapter -> get assigned to Router route path - from that useParams retrieve value
@@ -90,6 +92,7 @@ function ChaptersPage() {
 
     if (loading) {
         return <p className="page-message">Loading chapters...</p>;
+        //return <CommonLoader message="Loading chapters..." />;
     }
 
     return (
@@ -115,7 +118,11 @@ function ChaptersPage() {
                 </button>
             </section>
 
-            {error && <p className="error-message">{error}</p>}
+            {error && <p className="error-message">
+                        {error}
+                        <GlobalErrorPage />
+                       </p>
+            }
 
             {chapters.length === 0 ? (
                 <div className="empty-state">

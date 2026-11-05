@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import EntityForm from "../components/EntityForm";
 import { getBooks, addBook } from "../services/bookService";
+import GlobalErrorPage from "../GlobalErrorPage";
+import CommonLoader from "../components/CommonLoader";
 
 function BooksPage() {
     const [books, setBooks] = useState([]);
@@ -59,6 +61,7 @@ function BooksPage() {
 
     if (loading) {
         return <p className="page-message">Loading books...</p>;
+        //return <CommonLoader message="Loading books..." />;
     }
 
     return (
@@ -78,9 +81,13 @@ function BooksPage() {
                 </button>
             </section>
 
-            {error && <p className="error-message">{error}</p>}
+            {error && <p className="error-message">
+                        {error}
+                        <GlobalErrorPage />
+                       </p>
+            }
 
-            {books.length === 0 ? (
+            {!error && books.length === 0 ? (
                 <div className="empty-state">
                     <h2>Your library starts here</h2>
                     <p>Add your first book to begin.</p>

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/api/assests")
+@RequestMapping("/api/assets")
 @CrossOrigin(origins = "http://localhost:5173")
 public class AssetGenerationController {
 	private final PollinationsImageService imageService;	

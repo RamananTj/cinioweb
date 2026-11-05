@@ -30,7 +30,7 @@ public class PollinationsImageService {
 		try {
 			Files.createDirectories(uploadDirectory);
 			
-			byte[] imageBytes = restClient.get().uri(uriBuilder -> uriBuilder
+			byte[] imageBytes = restClient.get().uri(uriBuilder -> uriBuilder //https://gen.pollinations.ai/image/{prompt}?model=abc
 																	.path("/image/{prompt}")
 																	.queryParam("model", model)
 																	.build(prompt)
